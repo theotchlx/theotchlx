@@ -10,6 +10,7 @@ My current projects include:
 * Beep, a discord-like Web app in TS with React and Adonis.
 * Manar project RPG or smth
 * ...therest
+Python, C, HTML5/CSS3, SQL, video editing
 -->
 
 
