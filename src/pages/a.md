@@ -1,9 +1,6 @@
 ### Hi there!
-
 #### I'm Theo. I work as a DevOps apprentice and study at Polytech Montpellier (DO apprenticeship program).
-
 How to reach me:
-
 * By email: theo.tchlx@gmail.com
 </br>
 <!--
@@ -15,6 +12,7 @@ My current projects include:
 * ...therest
 Python, C, HTML5/CSS3, SQL, video editing
 -->
+
 
 <!--
 **theotchlx/theotchlx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

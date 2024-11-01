@@ -1,0 +1,4 @@
+# This file as configured allows all bots to scan and index the site.
+# Full syntax: https://developers.google.com/search/docs/advanced/robots/create-robots-txt
+User-agent: *
+Allow: /
