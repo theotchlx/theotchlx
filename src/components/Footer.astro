@@ -1,0 +1,38 @@
+---
+import Social from './Social.astro';
+
+const platforms = [
+  ["github", "GitHub", "theotchlx"],
+  ["linkedin", "LinkedIn", "theotchlx"]
+];
+---
+
+<footer>
+  <hr />
+  <p>Learn more about my projects on:</p>
+  <ul>
+  {platforms.map(([platform, name, username]) => 
+    <li>
+      <Social platform={platform} name={name} username={username} />
+    </li>
+  )}
+  </ul>
+  <p>
+    This website was made from scratch using Astro, and is completely modular and reusable!
+    Feel free to check it out on <a href="https://www.github.com/theotchlx/theotchlx">GitHub</a>
+  </p>
+</footer>
+
+<style>
+  footer {
+    margin-top: 2rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
