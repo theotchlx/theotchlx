@@ -1,37 +1,17 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
 
 const pageTitle = "My Blog";
 
-const articles = [
-  ["Article 1", "article-1"],
-  ["Article 2", "article-2"],
-  ["Article 3", "article-3"]
-];
+const articles = await Astro.glob('./articles/*.md');
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{ pageTitle }</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-
-    <h1>{ pageTitle }</h1>
-    <h2>Take a look at some of my articles :)!</h2>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-      {articles.map(([title, url], index) => 
-        <li key={index}>
-          <a href=`/articles/${url}/`>{ title }</a>
-        </li>
-      )}
-    </ul>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h1>{ pageTitle }</h1>
+  <h2>Take a look at some of my articles :)!</h2>
+  <p>This is where I will post about my journey learning Astro.</p>
+  <ul>
+    { articles.map((article) => <BlogPost url={article.url} title={article.frontmatter.title} />) }
+  </ul>
+</BaseLayout>
