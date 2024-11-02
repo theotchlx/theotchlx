@@ -1,5 +1,13 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "My Blog";
+
+const articles = [
+  ["Article 1", "article-1"],
+  ["Article 2", "article-2"],
+  ["Article 3", "article-3"]
+];
 ---
 
 <html lang="en">
@@ -19,9 +27,11 @@ const pageTitle = "My Blog";
     <h2>Take a look at some of my articles :)!</h2>
     <p>This is where I will post about my journey learning Astro.</p>
     <ul>
-      <li><a href="/articles/article-1/">Article 1</a></li>
-      <li><a href="/articles/article-2/">Article 2</a></li>
-      <li><a href="/articles/article-3/">Article 3</a></li>
+      {articles.map(([title, url], index) => 
+        <li key={index}>
+          <a href=`/articles/${url}/`>{ title }</a>
+        </li>
+      )}
     </ul>
   </body>
 </html>
