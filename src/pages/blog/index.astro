@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
 
 const pageTitle = "My Blog";
 
@@ -11,7 +11,10 @@ const articles = await Astro.glob('./articles/*.md');
   <h1>{ pageTitle }</h1>
   <h2>Take a look at some of my articles :)!</h2>
   <p>This is where I will post about my journey learning Astro.</p>
+  <p>Sort articles by tags: <a href="/blog/tags/">See all tags</a></p>
   <ul>
-    { articles.map((article) => <BlogPost url={article.url} title={article.frontmatter.title} />) }
+    {articles.map((article) => (
+      <BlogPost url={article.url} title={article.frontmatter.title} />
+    ))}
   </ul>
 </BaseLayout>
