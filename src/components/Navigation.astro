@@ -2,7 +2,70 @@
 ---
 
 <div class="nav-links">
-  <a href="/">> Home</a>
-  <a href="/about">> About</a>
-  <a href="/blog/">> Blog</a>
+  <a href="/">> Root/</a>
+  <a href="/about">> Resume</a>
+  <a href="/blog/">> Weblog/</a>
 </div>
+<hr />
+
+<style>
+  .nav-links {
+    width: 100%;
+    left: 48px;
+    display: block;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 5px 20px;
+  }
+}
+
+  .nav-links a {
+    color: #2D4A6F;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover, .nav-links a:hover, .nav-links a:active {
+    color: #045C1D;
+    background-color: #DADADA;
+  }
+
+  .nav-links a:active, .nav-links a:focus {
+    text-decoration: underline;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .nav-links a {
+      color: #4BA444;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover, .nav-links a:hover, .nav-links a:active {
+      color: #CA4800;
+      background-color: #DADADA;  /* Ich lieb' dich nicht du liebst mich nicht, */
+    }
+
+    .nav-links a:active {
+      text-decoration: underline;
+    }
+  }
+</style>

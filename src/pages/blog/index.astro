@@ -14,7 +14,7 @@ const articles = await Astro.glob('./articles/*.md');
   <p>Sort articles by tags: <a href="/blog/tags/">See all tags</a></p>
   <ul>
     {articles.map((article) => (
-      <BlogPost url={article.url} title={article.frontmatter.title} />
+      <BlogPost date={article.frontmatter.pubDate} url={article.url} title={article.frontmatter.title} />
     ))}
   </ul>
 </BaseLayout>

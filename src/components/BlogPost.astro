@@ -1,5 +1,21 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, date } = Astro.props;
 ---
 
-<li><a href={ url }>{ title }</a></li>
+<li class="blogs-list"><h4>{ date ? date.toString().slice(0,10) : '' }</h4> <a href={ url }>{ title }</a></li>
+
+<style>
+  a {
+    font-weight: bold;
+  }
+
+  h4 {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+</style>
