@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #F0F0F0;
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
@@ -7,9 +7,15 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  max-width: 115ch;
   padding: 1rem;
   line-height: 1.5;
+  font-weight: 450;
+  color: #4A4A4F;
+}
+
+h1, h2, h3, h4 {
+  color: #2A2A3F;
 }
 
 * {
@@ -22,48 +28,59 @@ h1 {
 }
 
 
-/* nav styles */
+/* links styles */
 
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
+a:hover {
+  color: #045C1D;
+  text-decoration: underline;
 }
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
+  
+a {
+  color: #2D4A6F;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #ff9776;
 }
 
 
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
+/* Theme styles for dark mode preference */
+
+@media (prefers-color-scheme: dark) {
+
+  html, body {
+    background-color: #2A2A2A;
+    color: #BBBBAA;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #B09000;
   }
 
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
+  /* links styles */
+
+  a {
+    color: #4BA444;
+    text-decoration: none;
   }
 
-  .hamburger {
-    display: none;
+  a:hover {
+    color: #CA4800;
+  }
+
+  
+
+  article > header {
+      background-color: #121212;
+  }
+  
+  .src, code {
+      color: #BBBB88;
+  }
+  
+  pre {
+      background-color: #494949;
+  }
+  
+  #toc {
+      border: 1px solid black;
+      background-color: #191919;
   }
 }

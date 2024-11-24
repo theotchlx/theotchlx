@@ -11,14 +11,20 @@ const pageTitle = "Tag Index";
 <BaseLayout pageTitle={pageTitle}>
   <div class="tags">
     {tags.map((tag) => (
-      <p class="tag"><a href={`/blog/tags/${tag}`}>{tag}</a></p>
-    ))}
-  </div>
+      <a class="tag" href={`/blog/tags/${tag}`}>{tag}</a>
+    ))
+    }</div>
 </BaseLayout>
 
 <style>
   a {
-    color: #00539F;
+    display: block;
+    text-decoration: none;
+    color: #2D4A6F;
+  }
+
+  a:hover {
+    color: #3D5A7F;
   }
 
   .tags {
@@ -28,10 +34,31 @@ const pageTitle = "Tag Index";
 
   .tag {
     margin: 0.25em;
-    border: dotted 1px #a1a1a1;
+    border: solid 1px #392F28;
     border-radius: .5em;
     padding: .5em 1em;
     font-size: 1.15em;
-    background-color: #F8FCFD;
+  }
+
+  .tag:hover {
+    background-color: #E5E3E5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: #A1A1A1;
+    }
+
+    a:hover {
+      color: #B1B1B1;
+    }
+
+    .tag {
+      background-color: #392F28;
+    }
+
+    .tag:hover {
+      background-color: #493F38;
+    }
   }
 </style>
