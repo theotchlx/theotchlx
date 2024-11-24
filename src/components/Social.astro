@@ -6,9 +6,26 @@ const { platform, name, username } = Astro.props;
 
 <style>
   a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
+    padding: 0.25rem 0.8rem;
     text-decoration: none;
+    color: #DADADA;
+    background-color: #403050;
+  }
+
+  a:hover {
+    color: #EAEAEA;
+    background-color: #504060;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: #4BA444;
+      background-color: #392F28;
+    }
+
+    a:hover {
+      color: #B1B1B1;
+      background-color: #493F38;
+    }
   }
 </style>

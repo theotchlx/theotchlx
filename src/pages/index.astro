@@ -5,6 +5,23 @@ const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Hello, World!</h1>
-  <h2>Welcome to my personal website :)</h2>
+  <!-- <h1>Hello and welcome.</h1> -->
+  <div class="about">
+    <h2>About me.</h2>
+    <p>
+      I'm <em>Théo Tchilinguirian</em>, a DevOps student apprentice from France.<br />
+      I'm passionate about open source, research and security.
+    </p>
+    <h3>My hobbies</h3>
+    <p>
+      I.. I like trains
+    </p>
+  </div>
 </BaseLayout>
+
+<style>
+  .about {
+    padding: 0.1em 1em;
+    box-shadow: 1px 1px 5px 1px #4F4F4F;
+  }
+</style>
