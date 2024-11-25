@@ -2,24 +2,27 @@
 import Social from './Social.astro';
 
 const platforms = [
-  ["github", "GitHub", "theotchlx"],
-  ["linkedin", "LinkedIn", "in/theotchlx"]
+  ["https://", "www.github.com/", "github", "GitHub", "theotchlx"],
+  ["https://", "www.linkedin.com/in/", "linkedin", "LinkedIn", "theotchlx"],
+  ["https://", "mastodon.social/", "mastodon", "Mastodon", "@theotchlx"],
+  ["https://", "codeberg.org/", "codeberg", "Codeberg", "theotchlx"],
+  ["https://", "sr.ht/", "sourcehut", "SourceHut", "~theotchlx"],
+  ["mailto:", "", "email", "Email", "theo.tchlx@proton.me"]
 ];
 ---
 
 <footer>
   <hr />
-  <p>Learn more about my projects on:</p>
+  <p>Social media, projects and contacts:</p>
   <ul>
-  {platforms.map(([platform, name, username]) => 
+  {platforms.map(([protocol, url, platform, name, username]) => 
     <li>
-      <Social platform={platform} name={name} username={username} />
+      <Social protocol={protocol} url={url} platform={platform} name={name} username={username} />
     </li>
   )}
   </ul>
   <p>
-    This website was made from scratch using Astro, and is completely modular and reusable!
-    Feel free to check it out on <a href="https://www.github.com/theotchlx/theotchlx">GitHub</a>
+    The code for this website can be found on <a href="https://www.github.com/theotchlx/theotchlx">GitHub</a>. Thanks <a href="https://mastodon.social/@solene@bsd.network">Solène</a> for the inspiration.
   </p>
 </footer>
 
