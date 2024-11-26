@@ -2,12 +2,12 @@
 import Social from './Social.astro';
 
 const platforms = [
-  ["https://", "www.github.com/", "github", "GitHub", "theotchlx"],
-  ["https://", "www.linkedin.com/in/", "linkedin", "LinkedIn", "theotchlx"],
-  ["https://", "mastodon.social/", "mastodon", "Mastodon", "@theotchlx"],
-  ["https://", "codeberg.org/", "codeberg", "Codeberg", "theotchlx"],
-  ["https://", "sr.ht/", "sourcehut", "SourceHut", "~theotchlx"],
-  ["mailto:", "", "email", "Email", "theo.tchlx@proton.me"]
+  ["https://", "www.github.com/", "GitHub", "theotchlx"],
+  ["https://", "www.linkedin.com/in/", "LinkedIn", "theotchlx"],
+  ["https://", "mastodon.social/", "Mastodon", "@theotchlx"],
+  ["https://", "codeberg.org/", "Codeberg", "theotchlx"],
+  ["https://", "sr.ht/", "SourceHut", "~theotchlx"],
+  ["mailto:", "", "Email", "theo.tchlx@proton.me"]
 ];
 ---
 
@@ -15,9 +15,9 @@ const platforms = [
   <hr />
   <p>How to reach me:</p>
   <ul>
-  {platforms.map(([protocol, url, platform, name, username]) => 
+  {platforms.map(([protocol, url, name, username]) => 
     <li>
-      <Social protocol={protocol} url={url} platform={platform} name={name} username={username} />
+      <Social protocol={protocol} url={url} name={name} username={username} />
     </li>
   )}
   </ul>

@@ -1,5 +1,5 @@
 ---
-const { protocol, url, platform, name, username } = Astro.props;
+const { protocol, url, name, username } = Astro.props;
 ---
 
 <a href={ `${protocol}${url}${username}` } target="_blank" rel="noopener noreferrer">{ name }</a>
