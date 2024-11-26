@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://theotch.github.io',
+  site: 'https://www.theotchlx.me',
   redirects: {
     '/blog/articles': '/blog'
   }

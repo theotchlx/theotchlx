@@ -1,38 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Background. Career. Skills. Goals.";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
+const pageTitle = "My background";
 
 const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{ pageTitle }...</h1>
-  <h2>... and my new Astro site!</h2>
+  <h1>{ pageTitle.toUpperCase() }</h1>
 
-  <h2 style="text-align: center">/!\ I'm currently looking for an internship /!\</h2>
+  <div class="box">
+    <h2>Every article is free to read, copy, and share :)!</h2>
+    <p>
+      This page lists my current level of education, professional experience, technical and interpersonal skills and goals. <br />
+      You can checkout <a href="/projects/">my projects</a> or <a href="/blog/">my blog</a> for a better understanding of my work and expertise.
+    </p>
+    <h2 style="text-align: center">/!\ I'm currently looking for an internship /!\</h2>
+  </div>
 
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    {identity.hobbies.length >= 2 &&
-      <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-    }
-  </ul>
   <h2>Here are a few technologies I'm familiar with</h2>
-  <p>Programming languages</p>
+  <h3>Programming languages</h3>
   <ul class="skill-list">
     {languages.map((language) =>
       <li class="skill">{language}</li>
@@ -87,10 +74,10 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
   </div>
 
   <div class="block">
-    <h4 class="block-title">Profesionnal experience</h4>
+    <h4 class="block-title">Professional experience</h4>
     <hr />
     <strong>DevOps apprentice engineer</strong>, <em>Renault Digital</em><br />
-    Sep 2023 – present | Paris, France
+    Sep 2023 - present | Paris, France
     <ul class="block-list">
       Part of an Agile DevOps team managing K8s on Google Cloud, where I worked on:
       <ul class="block-list">
@@ -106,7 +93,7 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
     <h4 class="block-title">Education</h4>
     <hr />
     <strong>3rd and 4th years of a 5-year Engineering qualification in Cloud and DevOps technologies and practices</strong>, <em>DO at Polytech Montpellier (Selective Apprenticeship Training)</em><br />
-    Sep 2023 – present | Montpellier, France
+    Sep 2023 - present | Montpellier, France
     <ul class="block-list">
       <strong>Equivalent to M. Eng. Expected graduation: 2026.</strong>
       <ul class="block-list">
@@ -120,7 +107,7 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
     <br />
 
     <strong>Equivalent to 2 years of Preparatory Classes leading to a place in one of Polytech's highly selective Engineering schools</strong>, <em>Polytech Montpellier (Selective Engineering School)</em>
-    Sep 2021 – Aug 2023 | Montpellier, France
+    Sep 2021 - Aug 2023 | Montpellier, France
     <ul class="block-list">
       <ul class="block-list">
         <li>Solid knowledge in sciences and technology.</li>
@@ -149,12 +136,6 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
 </BaseLayout>
 
 <style>
-  {/* Use is:global to make the style apply on components or layouts called in this page. */}
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-
   .skill-list {
     font-weight: bold;
   }
@@ -164,43 +145,19 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
     padding: 0.25em 0.5em;
     margin: 0.25em;
     background-color: #DADADA;
-    color: #2D4A6F;
-    border-radius: 0.1em;
     border: 1px solid #2D4A6F;
+    border-radius: 0.15em;
+    color: #2D4A6F;
   }
 
-  .block {
-    padding: 0.1em 1em;
-    box-shadow: 1px 1px 5px 1px #4F4F4F;
-    margin-bottom: 1.2em;
-    display: inline-block;
-  }
 
-  .block-title {
-    margin: 0.25em 0;
-  }
+/* Theme styles for dark mode preference */
 
-  hr {
-    margin: 0.25em 0 0.5em 0;
+@media (prefers-color-scheme: dark) {
+  .skill {
+    background-color: #2F1F3F;
+    border: 1px solid #BBBB99;
+    color: #BBBB99;
   }
-
-  .block-content {
-    list-style: none;
-    margin: 0.25em 0;
-    padding: 0 0.5em;
-  }
-
-  .block-list {
-    margin: 0.25em 0.75em;
-    padding: 0 0.5em;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1em;
-    /* display: grid;
-    display: flex;
-    gap: 1rem;*/
-  }
+}
 </style>

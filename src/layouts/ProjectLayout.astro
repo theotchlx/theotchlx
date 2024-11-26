@@ -1,0 +1,85 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  
+  <p><em>{frontmatter.description}</em></p>
+
+  <p>I have been a contributor of this project {frontmatter.dates}</p>
+  <p>Contributors: {frontmatter.contributors}</p>
+
+  <div class="tags">
+    {frontmatter.tags.map((tag) => (
+      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    ))}
+  </div>
+  <hr />
+  
+  <slot />
+</BaseLayout>
+
+<style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  hr {
+    margin: 2rem 0;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: #2D4A6F;
+  }
+
+  a:hover {
+    color: #3D5A7F;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: solid 1px #392F28;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+  }
+
+  .tag:hover {
+    background-color: #E5E3E5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: #A1A1A1;
+    }
+
+    a:hover {
+      color: #B1B1B1;
+    }
+
+    .tag {
+      background-color: #392F28;
+    }
+
+    .tag:hover {
+      background-color: #493F38;
+  }
+</style>

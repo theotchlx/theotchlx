@@ -2,19 +2,43 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Project from '../../components/Project.astro';
 
-const pageTitle = "My projects";
+const pageTitle = "MY PROJECTS";
 
 const projects = await Astro.glob('./*.md');
 const sizes = projects.map((project) => project.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{ pageTitle.toUpperCase() }</h1>
+  <h1>{ pageTitle }</h1>
   <div class="box">
     <h2>Here's what I made, or am working on!</h2>
     <p>Below are most of my current and past projects.</p>
-    <p>Sort projects by tags: <a href="/blog/tags/">See all tags</a></p>
+    <p>Sort talks by tags: <a href="/blog/tags/">See all tags</a></p>
   </div>
+
+  <div class="grid">
+    <div class="block">
+      <h4 class="block-title">Speaker experience</h4>
+      <hr />
+      <ul class="block-content">
+        <li><strong>French:</strong> native</li>
+        <li><strong>Spanish:</strong> conversational - <em>CEFR: B1</em></li>
+        <li><strong>English:</strong> advanced - <em>TOEIC score: 985/990</em>. <em>Date of test: September 2024</em></li>
+      </ul>
+    </div>
+    <div class="block">
+      <h4 class="block-title">Talks given</h4>
+      <hr />
+      <ul class="block-list">
+        <li>Empathy</li>
+        <li>Teamwork</li>
+        <li>Adaptation</li>
+        <li>Self-awareness</li>
+        <li>Critical thinking</li>
+      </ul>
+    </div>
+  </div>
+
   <ul>
     {sizes.map((size) => (
       // <>...</> is to return only one thing. Because a map returns only one element.

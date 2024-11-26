@@ -2,16 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
 
-const pageTitle = "My Blog";
+const pageTitle = "My blog";
 
 const articles = await Astro.glob('./articles/*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{ pageTitle }</h1>
-  <h2>Take a look at some of my articles :)!</h2>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <p>Sort articles by tags: <a href="/blog/tags/">See all tags</a></p>
+  <h1>{ pageTitle.toUpperCase() }</h1>
+  <div class="box">
+    <h2>Every article is free to read, copy, and share :)!</h2>
+    <p>This is where I publish my articles for free. I try to make them as clear, concise and qualitative as possible.<br />Feel free to send me any feedback (or anything, really!) by <a href="mailto:theo.tchlx@proton.me">email</a>.</p>
+    <p>Sort articles by tags: <a href="/blog/tags/">See all tags</a></p>
+  </div>
   <ul>
     {articles.map((article) => (
       <BlogPost date={article.frontmatter.pubDate} url={article.url} title={article.frontmatter.title} />

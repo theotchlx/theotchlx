@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Home Page";
+const pageTitle = "Root";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  {/* <h1>Hello and welcome.</h1> */}
-  <div class="about">
+  <h1>HELLO AND WELCOME</h1>
+
+  <div class="box">
     <h2>About me.</h2>
     <p>
       I'm <strong>Théo Tchilinguirian</strong>, a DevOps student apprentice from France.<br />
@@ -18,19 +19,16 @@ const pageTitle = "Home Page";
     </p>
   </div>
 
+  <p>
+    Théo Tchilinguirian. Je suis étudiant en apprentissage à Polytech Montpellier (DO), et apprenti ingénieur DevOps à Renault Digital.
+    Je suis passionné par l'open source, la recherche, la sécurité, et comprendre du caillou au cloud le fonctionnement des outils que j'utilise.
+
+
   <h3>I'm currently working on improving this website, come back to see the updates :)!</h3>
 
-  This website provides an RSS feed for my articles. You can find it at <a href="/feed.xml">/rss.xml</a>.<br />
+  This website provides an RSS feed for my articles. You can find it <a href="/rss.xml">here</a>!<br />
 
   You can take a look at <a href="/projects/">my projects</a> or <a href="/about">my resume</a>.<br />
   I write articles on <a href="/blog/">my blog</a>. I try to make them as clear, concise and qualitative as possible.<br />
-  I took notes of my contributions in FLOSS projects <a href="/contributions/">here</a>.
+  I took notes of my contributions in FLOSS projects <a href="/contributions/">here</a>, and you can find my talks <a href="/talks/">here</a>.<br />
 </BaseLayout>
-
-<style>
-  .about {
-    padding: 0.1em 1em;
-    box-shadow: 1px 1px 5px 1px #4F4F4F;
-    margin-bottom: 1.2em;
-  }
-</style>
