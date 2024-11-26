@@ -3,8 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import BlogPost from '../../../components/BlogPost.astro';
 
 export async function getStaticPaths() {
-  // @ts-ignore ignore TS errors for the next line.
-  const allArticles = await Astro.glob('../articles/*.md');
+  const allArticles: { frontmatter: { tags: string[], pubDate: string, title: string }, url: string }[] = await Astro.glob('../articles/*.md');
   const uniqueTags: string[] = [...new Set(allArticles.map((article) => article.frontmatter.tags).flat())];
 
   return uniqueTags.map((tag) => {
