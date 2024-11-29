@@ -1,3 +1,7 @@
+:root {
+  --min-column-width: 300px; /* Default value for grid column width. */
+}
+
 html {
   background-color: #F0F0F0;
   font-family: sans-serif;
@@ -50,9 +54,13 @@ a {
   background-color: #D4D4D4;
 }
 
+.title-bar {
+  margin: 1.25em 20em;
+}
+
 .block {
   background-color: #E4E4E4;
-  padding: 0.1em 1em;
+  padding: 0.25em 1em;
   box-shadow: 1px 1px 5px 1px #4F4F4F;
   margin-bottom: 1.2em;
   display: inline-block;
@@ -79,10 +87,16 @@ hr {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-column-width, 300px), 1fr));
+  gap: 0 1em;
 }
 
+/* Media query for bigger screens */
+@media screen and (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(var(--min-column-width, 400px), 1fr));
+  }
+}
 
 /* Theme styles for dark mode preference */
 
