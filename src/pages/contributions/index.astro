@@ -1,1 +1,55 @@
-my contributions to the open source community/world.
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DocumentItem from '../../components/DocumentItem.astro';
+
+const pageTitle = "My blog";
+
+const contributions = await Astro.glob('./*.md');
+contributions.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
+const qualities = contributions.map((contribution) => contribution.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1>{ pageTitle.toUpperCase() }</h1>
+  <section class="box">
+    <h2>Every contribution is free to read, copy, and share :)!</h2>
+    <p>This is where I publish my contributions for free. I try to make them as clear, concise and qualitative as possible.<br />Feel free to send me any feedback (or anything, really!) by <a href="mailto:theo.tchlx@proton.me">email</a>.</p>
+    depth of size. Rich moderate shallow (shallow is only covers surface level blahblahblah)
+    <p>Sort contributions by tags: <a href="/blog/tags/">See all tags</a></p>
+    my contributions to the open source community/world.
+  </section>
+
+  <hr  class="title-bar" />
+
+  <ul>
+    {qualities.sort().map((size) => (
+      // <>...</> is to return only one thing. Because a map returns only one element.
+      <>
+      <h3>
+        {size === 1
+          ? "Rich size depth"
+          : size === 2
+          ? "Moderate size depth"
+          : size === 3
+          ? "Shallow size depth"
+          : "Other contributions"}
+      </h3>
+      {contributions
+        .filter((project) => project.frontmatter.size === size)
+        .map((contribution) => (
+          <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
+        ))}
+      </>
+    ))}
+  </ul>
+  <hr />
+  <ul>
+    <h3>All contributions by date (latest first)</h3>
+    {contributions
+      .map((contribution) => (
+        <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
+      ))}
+  </ul>
+</BaseLayout>
+
