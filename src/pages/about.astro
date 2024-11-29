@@ -3,31 +3,101 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "My background";
 
-const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const technos = [
+  {
+    title: "Programming languages",
+    content: ["Rust", "Go", "Python", "TypeScript", "C"]
+  },
+  {
+    title: "Frontend web frameworks",
+    content: ["React+NextJS+Vite", "Angular", "Astro", "VueJS"]
+  },
+  {
+    title: "Backend web frameworks",
+    content: ["AdonisJS", "NestJS", "ExpressJS"]
+  },
+  {
+    title: "Containerization and orchestration",
+    content: ["Docker", "Compose", "Kubernetes", "Podman", "Packer"]
+  },
+  {
+    title: "Virtualization platforms",
+    content: ["QEMU+KVM", "Proxmox"]
+  },
+  {
+    title: "Automation workflows and GitOps",
+    content: ["GitLab CI", "GitHub Actions", "ArgoCD"]
+  },
+  {
+    title: "Monitoring and log management tools",
+    content: ["Prometheus", "Grafana", "Uptime Kuma"]
+  },
+  {
+    title: "Remote infrastructure and configuration management",
+    content: ["Terraform", "Ansible"]
+  },
+  {
+    title: "Cloud service providers",
+    content: ["GCP", "AWS", "OVH"]
+  },
+  {
+    title: "SQL database systems",
+    content: ["PostgreSQL", "MySQL", "SQLite"]
+  },
+  {
+    title: "Document database systems",
+    content: ["MongoDB"]
+  },
+  {
+    title: "key-value database systems",
+    content: ["Redis"]
+  },
+  {
+    title: "Object storage systems",
+    content: ["MinIO"]
+  },
+  {
+    title: "Operating system administration",
+    content: ["Linux", "FreeBSD"]
+  },
+  {
+    title: "Networking",
+    content: ["Traefik", "Nginx", "Apache"]
+  },
+  {
+    title: "Red-team security",
+    content: ["netcat", "curl", "nmap"]
+  },
+  {
+    title: "Blue-team security",
+    content: ["ufw"]
+  }
+];
+
+const enjoy = {
+  title: "What I enjoy the most...",
+  content: ["OS development", "Low-level programming", "DevOps workflows and automation", "Backend development", "Architecture design", "Writing clear and concise documentation"]
+};
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
 
-  <div class="box">
-    <h2>Every article is free to read, copy, and share :)!</h2>
+  <section class="box">
+    <h2>My area of expertise, experience, education...</h2>
     <p>
       This page lists my current level of education, professional experience, technical and interpersonal skills and goals. <br />
-      You can checkout <a href="/projects/">my projects</a> or <a href="/blog/">my blog</a> for a better understanding of my work and expertise.
+      You can checkout <a href="/projects/">my projects</a> or <a href="/blog/">my blog</a> for a better understanding of my work and expertise/ to see more of my work / to have a more complete overview of... + lien des talks.
     </p>
-    <h2 style="text-align: center">/!\ I'm currently looking for an internship /!\</h2>
-  </div>
+    <h2 style="text-align: center"><em>I'm currently looking for an internship</em></h2>
+  </section>
 
-  <h2>Here are a few technologies I'm familiar with</h2>
-  <h3>Programming languages</h3>
-  <ul class="skill-list">
-    {languages.map((language) =>
-      <li class="skill">{language}</li>
-    )}
-  </ul>
+  <hr  class="title-bar" />
 
-  <div class="grid">
+  <p>If you are interested in my profile, you can send me an email at <a href="mailto:theo.tchlx@proton.me"><strong style="color: #89AF88;">theo.tchlx@proton.me</strong></a>. Be yourself!</p>
 
+  <section id="current-occupation">
     <div class="block">
       <h4 class="block-title">Current occupation</h4>
       <hr />
@@ -36,7 +106,9 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
         <li>I also work as a <strong>DevOps apprentice engineer</strong> at Renault Digital, the IT subsidiary of the French automaker based near Paris, France.</li>
       </ul>
     </div>
+  <section>
 
+  <section id="auxilliary-knowledge" class="grid grid-1">
     <div class="block">
       <h4 class="block-title">Spoken and written languages</h4>
       <hr />
@@ -59,105 +131,222 @@ const languages = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"
         <li>Critical thinking</li>
       </ul>
     </div>
-  </div>
 
-  <div class="block">
-    <h4 class="block-title">Interests & hobbies</h4>
-    <hr />
-    <ul class="block-list">
-      <li>Open source</li>
-      <li>Research</li>
-      <li>Security</li>
-      <li>Management</li>
-      <li>New technologies</li>
-    </ul>
-  </div>
-
-  <div class="block">
-    <h4 class="block-title">Professional experience</h4>
-    <hr />
-    <strong>DevOps apprentice engineer</strong>, <em>Renault Digital</em><br />
-    Sep 2023 - present | Paris, France
-    <ul class="block-list">
-      Part of an Agile DevOps team managing K8s on Google Cloud, where I worked on:
+    <div class="block">
+      <h4 class="block-title">Interests & hobbies</h4>
+      <hr />
       <ul class="block-list">
-        <li>Automating SQL/NoSQL database migrations.</li>
-        <li>Building infrastructure on GCP.</li>
-        <li>Maintaining GitLab CI/CD pipelines.</li>
-        <li>Optimizating software.</li>
+        <li>Open source</li>
+        <li>Research</li>
+        <li>Security</li>
+        <li>Management</li>
+        <li>New technologies</li>
       </ul>
-    </ul>
-  </div>
+    </div>
 
-  <div class="block">
-    <h4 class="block-title">Education</h4>
-    <hr />
-    <strong>3rd and 4th years of a 5-year Engineering qualification in Cloud and DevOps technologies and practices</strong>, <em>DO at Polytech Montpellier (Selective Apprenticeship Training)</em><br />
-    Sep 2023 - present | Montpellier, France
-    <ul class="block-list">
-      <strong>Equivalent to M. Eng. Expected graduation: 2026.</strong>
+    {/*
+    <div class="block">
+      <h4 class="block-title">Goals, objectives</h4>
       <ul class="block-list">
-        <li>Managing complex cloud-based architecture.</li>
-        <li>Developing cloud-native software.</li>
-        <li>Producing open source software with teams of up to 15 students.</li>
-        <li>Working with the entire chain of testing, CI/CD, improvement and monitoring of applications in distributed environments.</li>
+        <li>Promote human rights</li>
+        <li>Warn / instruct / promote biodiversity|preservation</li>
+        <li> pollution</li>
+        <li>Contribute to open source</li>
+        <li>Improve scientific research<li>
       </ul>
-    </ul>
+    </div>
+    */}
+  </section>
 
-    <br />
-
-    <strong>Equivalent to 2 years of Preparatory Classes leading to a place in one of Polytech's highly selective Engineering schools</strong>, <em>Polytech Montpellier (Selective Engineering School)</em>
-    Sep 2021 - Aug 2023 | Montpellier, France
-    <ul class="block-list">
+  <section id="experience" class="grid grid-2">
+    <div class="block">
+      <h4 class="block-title">Professional experience</h4>
+      <hr />
+      <strong>DevOps apprentice engineer</strong>, <em>Renault Digital</em><br />
+      Sep 2023 - present | Paris, France
       <ul class="block-list">
-        <li>Solid knowledge in sciences and technology.</li>
-        <li>Engineering practices, critical thinking and problem solving.</li>
-        <li>Various software projects and computer science courses.</li>
+        Part of an Agile DevOps team managing K8s on Google Cloud, where I worked on:
+        <ul class="block-list">
+          <li>Automating SQL/NoSQL database migrations.</li>
+          <li>Building infrastructure on GCP.</li>
+          <li>Maintaining GitLab CI/CD pipelines.</li>
+          <li>Optimizating software.</li>
+        </ul>
       </ul>
-    STEM, Human sciences, English, Computer science.
-    </ul>
-  </div>
+    </div>
+  </section>
 
-  {/*
-  <div class="block">
-    <h4 class="block-title">Goals, objectives</h4>
-    <ul class="block-list">
-      <li>Promote human rights</li>
-      <li>Warn / instruct / promote biodiversity|preservation</li>
-      <li> pollution</li>
-      <li>Contribute to open source</li>
-      <li>Improve scientific research<li>
-    </ul>
-  </div>
-  */}
-  </div>
+  <section id="education" class="grid grid-3">
+    <div class="block">
+      <h4 class="block-title">Education - present (3rd to 5th years)</h4>
+      <hr />
+      <strong>3rd and 4th years of a 5-year Engineering qualification in Cloud and DevOps technologies and practices</strong>, <em>DO at Polytech Montpellier (Selective Apprenticeship Training)</em><br />
+      Sep 2023 - present | Montpellier, France
+      <ul class="block-list">
+        <strong>Equivalent to M. Eng. Expected graduation: 2026.</strong>
+        <ul class="block-list">
+          <li>Managing complex cloud-based architecture.</li>
+          <li>Developing cloud-native software.</li>
+          <li>Producing open source software with teams of up to 15 students.</li>
+          <li>Working with the entire chain of testing, CI/CD, improvement and monitoring of applications in distributed environments.</li>
+        </ul>
+      </ul>
+    </div>
+    <div class="block">
+      <h4 class="block-title">Education - past (1st & 2nd years)</h4>
+      <hr />
+      <strong>Equivalent to 2 years of Preparatory Classes leading to a place in one of Polytech's highly selective Engineering schools</strong>, <em>Polytech Montpellier (Selective Engineering School)</em>
+      Sep 2021 - Aug 2023 | Montpellier, France
+      <ul class="block-list">
+        <ul class="block-list">
+          <li>Solid knowledge in sciences and technology.</li>
+          <li>Engineering practices, critical thinking and problem solving.</li>
+          <li>Producing reports based on bibliographical research of scientific literature.</li>
+          <li>Various software projects and computer science courses.</li>
+        </ul>
+      STEM, Human sciences, English, Computer science.
+      </ul>
+    </div>
+  </section>
 
-  If you are interested in my profile, you can send me an email at <a href="mailto:theo.tchlx@proton.me"><strong style="color: #89AF88;">theo.tchlx@proton.me</strong></a>. Be yourself!
+  <section id="skills" class="skills-section">
+    <hr  class="title-bar" />
+    <h2>Here are a few technologies I'm familiar with</h2>
+    <h3>This list does not include Cloud service providers' products</h3>
+    <details>
+      <summary class="top-summary">Click here to show/hide the list</summary>
+      <h3>Each list is sorted in descending order of practice with the products</h3>
+      {technos.map((techno) => (
+          <details open="true">
+            <summary>{techno.title}</summary>
+            <ul class="skill-list">
+              {techno.content.map((element) =>
+                <li class="skill">{element}</li>
+              )}
+            </ul>
+          </details>
+        ))}
+    </details>
+  </section>
 </BaseLayout>
 
 <style>
-  .skill-list {
+  /* Grid override styles */
+
+  .grid-1 {
+    --min-column-width: 300px;
+  }
+
+
+  /* Skill lists styles */
+
+  .top-summary {
+    cursor: pointer;
     font-weight: bold;
+    color: #2D4A6F;
+    margin: -0.5em;
+    padding: 0.5em;
+    text-align: center;
   }
 
   .skill {
-    display: inline-block;
-    padding: 0.25em 0.5em;
-    margin: 0.25em;
     background-color: #DADADA;
     border: 1px solid #2D4A6F;
-    border-radius: 0.15em;
+    border-radius: 0.3em;
+    color: #2D4A6F;
+    text-align: center;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5em 1em;
+  }
+
+  .skills-section {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .skills-section h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .skills-section h3 {
+    margin-top: 0;
+    padding: 0;
+    text-align: center;
     color: #2D4A6F;
   }
 
-
-/* Theme styles for dark mode preference */
-
-@media (prefers-color-scheme: dark) {
-  .skill {
-    background-color: #2F1F3F;
-    border: 1px solid #BBBB99;
-    color: #BBBB99;
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5em;
+    list-style: none;
+    font-weight: bold;
+    margin: 0.5em 0 0;
+    padding: 0;
   }
-}
+
+  .skill:hover {
+    background-color: #2D4A6F;
+    color: #FFF;
+  }
+
+  /* Style for <details> and <summary> */
+  details {
+    margin-bottom: 1em;
+    border: 1px solid #2D4A6F;
+    border-radius: 0.3em;
+    background-color: #F7F7F7;
+    padding: 0.5em;
+    overflow: hidden;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2D4A6F;
+    margin: -0.5em;
+    padding: 0.5em;
+  }
+
+  summary:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Media query for bigger screens and grid override styles */
+  @media screen and (min-width: 640px) {
+    .grid-1 {
+      --min-column-width: 200px;
+    }
+
+    .grid-2 {
+      --min-column-width: 600px;
+    }
+
+    .grid-3 {
+      --min-column-width: 500px;
+    }
+  }
+
+  @media screen and (min-width: 880px) {
+    .grid-1 {
+      --min-column-width: 300px;
+    }
+  }
+
+
+  /* Theme styles for dark mode preference */
+
+  @media (prefers-color-scheme: dark) {
+    .skill {
+      background-color: #2F1F3F;
+      border: 1px solid #BBBB99;
+      color: #BBBB99;
+    }
+  }
 </style>
