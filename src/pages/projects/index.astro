@@ -1,44 +1,49 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Project from '../../components/Project.astro';
+import DocumentItem from '../../components/DocumentItem.astro';
 
 const pageTitle = "My projects";
 
 const projects = await Astro.glob('./*.md');
+projects.sort((a, b) => Date.parse(b.frontmatter.startDate) - Date.parse(a.frontmatter.startDate));
+
 const sizes = projects.map((project) => project.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
-  <div class="box">
+  <section class="box">
     <h2>Here's what I made, or am working on!</h2>
     <p>Below are most of my current and past projects.</p>
     <p>Sort projects by tags: <a href="/blog/tags/">See all tags</a></p>
-  </div>
+  </section>
+
+  <hr  class="title-bar" />
+
   <ul>
     {sizes.map((size) => (
       // <>...</> is to return only one thing. Because a map returns only one element.
       <>
       <h3>
-        {size === "large"
-          ? "Large Projects"
-          : size === "medium"
-          ? "Middling Projects"
-          : size === "tiny"
-          ? "Tiny Projects"
+        {size === 1
+          ? "Large projects"
+          : size === 2
+          ? "Middling projects"
+          : size === 3
+          ? "Tiny projects"
           : "Other projects"}
       </h3>
       {projects
         .filter((project) => project.frontmatter.size === size)
         .map((project) => (
-          <Project
+          <DocumentItem
             url={project.url}
             title={project.frontmatter.title}
             description={project.frontmatter.description}
-            startDate={project.frontmatter.startDate}
+            date={project.frontmatter.startDate}
           />
         ))}
-        </>
+      </>
     ))}
   </ul>
 </BaseLayout>
