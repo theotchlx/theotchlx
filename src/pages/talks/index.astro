@@ -1,20 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Project from '../../components/Project.astro';
+import DocumentItem from '../../components/DocumentItem.astro';
 
-const pageTitle = "MY PROJECTS";
+const pageTitle = "MY TALKS";
 
-const projects = await Astro.glob('./*.md');
-const sizes = projects.map((project) => project.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
+const talks = await Astro.glob('./*.md');
+talks.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
+const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>{ pageTitle }</h1>
-  <div class="box">
+  <section class="box">
     <h2>Here's what I made, or am working on!</h2>
-    <p>Below are most of my current and past projects.</p>
+    <p>Below are most of my current and past talks.</p>
     <p>Sort talks by tags: <a href="/blog/tags/">See all tags</a></p>
-  </div>
+    <p>
+      I am currently applying to a Call For Paper (CFP) for the <a href="https://sunny-tech.io/" target="_blank" rel="noopener noreferrer">Sunny Tech 2025</a> :).
+    </p>
+  </section>
+
+  <hr class="title-bar" />
 
   <div class="grid">
     <div class="block">
@@ -39,30 +46,40 @@ const sizes = projects.map((project) => project.frontmatter.size).filter((value,
     </div>
   </div>
 
+  <hr />
+
   <ul>
     {sizes.map((size) => (
       // <>...</> is to return only one thing. Because a map returns only one element.
       <>
       <h3>
-        {size === "large"
-          ? "Large Projects"
-          : size === "medium"
-          ? "Middling Projects"
-          : size === "tiny"
-          ? "Tiny Projects"
-          : "Other projects"}
+        {size === 1
+          ? "Deep dives"
+          : size === 2
+          ? "Moderately sized talks"
+          : size === 3
+          ? "Concise talks"
+          : "Other talks"}
       </h3>
-      {projects
-        .filter((project) => project.frontmatter.size === size)
-        .map((project) => (
-          <Project
-            url={project.url}
-            title={project.frontmatter.title}
-            description={project.frontmatter.description}
-            startDate={project.frontmatter.startDate}
+      {talks
+        .filter((talk) => talk.frontmatter.size === size)
+        .map((talk) => (
+          <DocumentItem
+            url={talk.url}
+            title={talk.frontmatter.title}
+            description={talk.frontmatter.abstract}
+            date={talk.frontmatter.pubDate}
           />
         ))}
         </>
     ))}
+  </ul>
+  <hr />
+  <ul>
+    <h3>All talks by date (most recent first)</h3>
+    {talks
+      .map((talk) => (
+        <DocumentItem date={talk.frontmatter.pubDate} url={talk.url} title={talk.frontmatter.title} description={talk.frontmatter.abstract} />
+      ))}
   </ul>
 </BaseLayout>
