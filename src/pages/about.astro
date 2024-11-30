@@ -210,7 +210,7 @@ const enjoy = {
   </section>
 
   <section id="skills" class="skills-section">
-    <hr  class="title-bar" />
+    <hr class="title-bar" />
     <h2>Here are a few technologies I'm familiar with</h2>
     <h3>This list does not include Cloud service providers' products</h3>
     <details>
@@ -221,7 +221,7 @@ const enjoy = {
             <summary>{techno.title}</summary>
             <ul class="skill-list">
               {techno.content.map((element) =>
-                <li class="skill">{element}</li>
+                <li class="skill"><code>{element}</code></li>
               )}
             </ul>
           </details>
@@ -237,21 +237,28 @@ const enjoy = {
     --min-column-width: 300px;
   }
 
-
   /* Skill lists styles */
 
   .top-summary {
-    cursor: pointer;
+    cursor: help;
     font-weight: bold;
     color: #2D4A6F;
-    margin: -0.5em;
-    padding: 0.5em;
     text-align: center;
+  }
+
+  summary {
+    cursor: context-menu;
+    font-weight: bold;
+    color: #2D4A6F;
+  }
+
+  summary:hover {
+    text-decoration: underline;
   }
 
   .skill {
     background-color: #DADADA;
-    border: 1px solid #2D4A6F;
+    border: 1.5px solid #2D4A6F;
     border-radius: 0.3em;
     color: #2D4A6F;
     text-align: center;
@@ -260,11 +267,19 @@ const enjoy = {
     padding: 0.5em 1em;
   }
 
+  .skill:hover {
+    background-color: #6D8A9F;
+    color: #EFEFEF;
+  }
+  
+  code {
+    font-size: large; 
+  }
+
   .skills-section {
     max-width: 900px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    color: #333;
   }
 
   .skills-section h2 {
@@ -290,10 +305,6 @@ const enjoy = {
     padding: 0;
   }
 
-  .skill:hover {
-    background-color: #2D4A6F;
-    color: #FFF;
-  }
 
   /* Style for <details> and <summary> */
   details {
@@ -303,18 +314,6 @@ const enjoy = {
     background-color: #F7F7F7;
     padding: 0.5em;
     overflow: hidden;
-  }
-
-  summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: #2D4A6F;
-    margin: -0.5em;
-    padding: 0.5em;
-  }
-
-  summary:hover {
-    text-decoration: underline;
   }
 
 
@@ -343,10 +342,33 @@ const enjoy = {
   /* Theme styles for dark mode preference */
 
   @media (prefers-color-scheme: dark) {
-    .skill {
-      background-color: #2F1F3F;
-      border: 1px solid #BBBB99;
+    .top-summary {
+      color: #2B7A62;
       color: #BBBB99;
+    }
+    
+    summary {
+      color: #98B77D;
+    }
+
+    .skill {
+      background-color: #301E17;
+      border-color: #DEAD;
+      color: #2B7A4D;
+    }
+    
+    .skill:hover {
+      background-color: #0E392C;
+      color: #DECD;
+    }
+    
+    .skills-section h3 {
+      color: #2F7E66;
+    }
+
+    details {
+      background-color: #242424;
+      border-color: #DEAD;
     }
   }
 </style>
