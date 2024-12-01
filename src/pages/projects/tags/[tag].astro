@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DocumentItem from '../../../components/DocumentItem.astro';
+
+export async function getStaticPaths() {
+  const allProjects: { frontmatter: { tags: string[], startDate: string, title: string, description: string }, url: string }[] = await Astro.glob('../*.md');
+  const uniqueTags: string[] = [...new Set(allProjects.map((project) => project.frontmatter.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allProjects.filter((project) => project.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { projects: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { projects } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Projects tagged with "{ tag }":</p>
+  <ul>
+    { projects.map((project) => <DocumentItem date={project.frontmatter.startDate} url={project.url} title={project.frontmatter.title} description={project.frontmatter.description} />) }
+  </ul>
+</BaseLayout>

@@ -5,7 +5,7 @@ import DocumentItem from '../../components/DocumentItem.astro';
 const pageTitle = "MY TALKS";
 
 const talks = await Astro.glob('./*.md');
-talks.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+talks.sort((a, b) => Date.parse(b.frontmatter.dateGiven) - Date.parse(a.frontmatter.dateGiven));
 
 const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
@@ -57,7 +57,7 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
             url={talk.url}
             title={talk.frontmatter.title}
             description={talk.frontmatter.abstract}
-            date={talk.frontmatter.pubDate}
+            date={talk.frontmatter.dateGiven}
           />
         ))}
         </>
@@ -68,7 +68,7 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
     <h3>All talks by date (most recent first)</h3>
     {talks
       .map((talk) => (
-        <DocumentItem date={talk.frontmatter.pubDate} url={talk.url} title={talk.frontmatter.title} description={talk.frontmatter.abstract} />
+        <DocumentItem date={talk.frontmatter.dateGiven} url={talk.url} title={talk.frontmatter.title} description={talk.frontmatter.abstract} />
       ))}
   </ul>
 </BaseLayout>

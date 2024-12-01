@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DocumentItem from '../../../components/DocumentItem.astro';
+
+export async function getStaticPaths() {
+  const allTalks: { frontmatter: { tags: string[], dateGiven: string, title: string, abstract: string }, url: string }[] = await Astro.glob('../*.md');
+  const uniqueTags: string[] = [...new Set(allTalks.map((talk) => talk.frontmatter.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allTalks.filter((talk) => talk.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { talks: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { talks } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Talks tagged with "{ tag }":</p>
+  <ul>
+    { talks.map((talk) => <DocumentItem date={talk.frontmatter.dateGiven} url={talk.url} title={talk.frontmatter.title} description={talk.frontmatter.abstract} />) }
+  </ul>
+</BaseLayout>

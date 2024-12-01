@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 
 title: 'Beep'
 abstract: 'A short and interactive talk about a practical use of the Linux OOM killer.'
-startDate: 2024-01
+dateGiven: 2024-01
 dates: "since its launch in early January 2024"
 contributors: "The DO class of 2023-2026 (15 people)"
 tags: ["open source", "large", "gitlab", "web", "devops", "cloud", "webrtc", "management"]
