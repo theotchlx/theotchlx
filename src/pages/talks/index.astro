@@ -15,33 +15,22 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
   <section class="box">
     <h2>Here's what I made, or am working on!</h2>
     <p>Below are most of my current and past talks.</p>
-    <p>Sort talks by tags: <a href="/blog/tags/">See all tags</a></p>
-    <p>
-      I am currently applying to a Call For Paper (CFP) for the <a href="https://sunny-tech.io/" target="_blank" rel="noopener noreferrer">Sunny Tech 2025</a> :).
-    </p>
+    <p>Sort talks by tags: <a href="/talks/tags/">See all tags</a></p>
   </section>
 
   <hr class="title-bar" />
 
-  <div class="grid">
-    <div class="block">
+  <p>
+    I am currently applying to a Call For Paper (CFP) for the <a href="https://sunny-tech.io/" target="_blank" rel="noopener noreferrer">Sunny Tech 2025</a> :).
+  </p>
+  <div class="grid grid-1">
+    <div id="speaker-experience" class="block">
       <h4 class="block-title">Speaker experience</h4>
       <hr />
       <ul class="block-content">
-        <li><strong>French:</strong> native</li>
-        <li><strong>Spanish:</strong> conversational - <em>CEFR: B1</em></li>
-        <li><strong>English:</strong> advanced - <em>TOEIC score: 985/990</em>. <em>Date of test: September 2024</em></li>
-      </ul>
-    </div>
-    <div class="block">
-      <h4 class="block-title">Talks given</h4>
-      <hr />
-      <ul class="block-list">
-        <li>Empathy</li>
-        <li>Teamwork</li>
-        <li>Adaptation</li>
-        <li>Self-awareness</li>
-        <li>Critical thinking</li>
+        <li><strong>Talks given:</strong> 1</li>
+        <li><strong>Average length:</strong> 20mn</li>
+        <li><strong>Conferences and events I've been a speaker at:</strong> 1</li>
       </ul>
     </div>
   </div>
@@ -56,7 +45,7 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
         {size === 1
           ? "Deep dives"
           : size === 2
-          ? "Moderately sized talks"
+          ? "Medium-sized talks"
           : size === 3
           ? "Concise talks"
           : "Other talks"}
@@ -83,3 +72,14 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
       ))}
   </ul>
 </BaseLayout>
+
+<style>
+  /* Media query for bigger screens and grid override styles */
+  @media screen and (min-width: 640px) {
+    /* Grid override styles */
+
+    .grid-1 {
+      --min-column-width: 600px;
+    }
+  }
+</style>
