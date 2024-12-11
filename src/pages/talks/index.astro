@@ -131,6 +131,7 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
       display: block;
       width: 300px; /* Custom image width. */
       clip-path: inset(0 0 85px 0); /* Cut image bottom. */
+      margin-bottom: -85px; /* Move image up from the cut bottom.*/
     }
   }
 </style>
