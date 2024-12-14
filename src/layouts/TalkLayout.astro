@@ -8,8 +8,8 @@ const { frontmatter } = Astro.props;
   <h1>{frontmatter.title}</h1>
   
   <p>
-    I have given this talk {frontmatter.dates}<br />
-    <strong>Talker(s):</strong> {frontmatter.talkers}
+    <strong>Places and times:</strong> {frontmatter.dates}<br />
+    <strong>Talkers:</strong> {frontmatter.talkers}
   </p>
   <blockquote><em>{frontmatter.abstract}</em></blockquote>
   <strong>Tags:</strong>
