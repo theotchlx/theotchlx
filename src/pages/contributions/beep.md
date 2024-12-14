@@ -10,8 +10,6 @@ tags: ["open source", "large", "gitlab", "web", "devops", "cloud", "webrtc", "ma
 size: 3
 ---
 
-### <center>/!\ This article is a work in progress! /!\
-
 ## The project
 
 **Beep** is a social media platform / messaging web application that can handle dozens of concurrent video/audio streams, as well as instant messaging, files, and has tons of features!

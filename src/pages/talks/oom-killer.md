@@ -4,7 +4,7 @@ layout: ../../layouts/TalkLayout.astro
 title: 'Beep'
 abstract: 'An interactive talk about a practical use of the Linux OOM killer.'
 dateGiven: 2024-06
-dates: "at the Polycloud in June 2024."
+dates: "Polycloud (2024)"
 talkers: "Théo Tchilinguirian"
 tags: ["Linux"]
 size: 3
