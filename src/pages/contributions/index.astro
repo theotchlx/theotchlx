@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DocumentItem from '../../components/DocumentItem.astro';
 
-const pageTitle = "My blog";
+const pageTitle = "My contributions";
 
 const contributions = await Astro.glob('./*.md');
 contributions.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
@@ -10,7 +10,7 @@ contributions.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.fr
 const qualities = contributions.map((contribution) => contribution.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={"theotchlx | " + pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
   <section class="box">
     <h2>My contributions to the world of open source software.</h2>

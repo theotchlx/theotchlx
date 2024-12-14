@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DocumentItem from '../../components/DocumentItem.astro';
 
-const pageTitle = "MY TALKS";
+const pageTitle = "My talks";
 
 const talks = await Astro.glob('./*.md');
 talks.sort((a, b) => Date.parse(b.frontmatter.dateGiven) - Date.parse(a.frontmatter.dateGiven));
@@ -10,8 +10,8 @@ talks.sort((a, b) => Date.parse(b.frontmatter.dateGiven) - Date.parse(a.frontmat
 const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h1>{ pageTitle }</h1>
+<BaseLayout pageTitle={"theotchlx | " + pageTitle}>
+  <h1>{ pageTitle.toUpperCase() }</h1>
   <div class="super-block">
     <!-- Left side -->
     <div class="left-block">

@@ -10,7 +10,7 @@ projects.sort((a, b) => Date.parse(b.frontmatter.startDate) - Date.parse(a.front
 const sizes = projects.map((project) => project.frontmatter.size).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={"theotchlx | " + pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
   <section class="box">
     <h2>Here's what I made, or am working on.</h2>

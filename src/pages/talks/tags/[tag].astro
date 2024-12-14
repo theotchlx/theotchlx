@@ -19,7 +19,7 @@ const { tag } = Astro.params;
 const { talks } = Astro.props;
 ---
 
-<BaseLayout pageTitle={tag}>
+<BaseLayout pageTitle={"theotchlx | " + tag + " tag"}>
   <p>Talks tagged with "{ tag }":</p>
   <ul>
     { talks.map((talk) => <DocumentItem date={talk.frontmatter.dateGiven} url={talk.url} title={talk.frontmatter.title} description={talk.frontmatter.abstract} />) }

@@ -4,7 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const allContributions = await Astro.glob('../*.md');
 const tags = [...new Set(allContributions.map((contribution) => contribution.frontmatter.tags).flat())];
 
-const pageTitle = "Contributions tag index";
+const pageTitle = "theotchlx | contributions tag index";
 ---
 
 <BaseLayout pageTitle={pageTitle}>

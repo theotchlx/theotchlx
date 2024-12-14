@@ -10,7 +10,7 @@ articles.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 const qualities = articles.map((article) => article.frontmatter.insight).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={"theotchlx | " + pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
   <section class="box">
     <h2>Every article is free to read, copy, and share.</h2>
