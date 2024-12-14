@@ -13,13 +13,19 @@ const qualities = articles.map((article) => article.frontmatter.insight).filter(
 <BaseLayout pageTitle={pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
   <section class="box">
-    <h2>Every article is free to read, copy, and share :)!</h2>
-    <p>This is where I publish my articles for free. I try to make them as clear, concise and qualitative as possible.<br />Feel free to send me any feedback (or anything, really!) by <a href="mailto:theo.tchlx@proton.me">email</a>.</p>
-    depth of insight. Rich moderate shallow (shallow is only covers surface level blahblahblah)
+    <h2>Every article is free to read, copy, and share.</h2>
+    <p>
+      This is where I publish my articles for free. I try to make them as clear, concise and qualitative as possible.<br />
+      They are sorted by depth of insight into their subject, but you can also sort them by tags.
+    </p>
     <p>Sort articles by tags: <a href="/blog/tags/">See all tags</a></p>
+    <p>Feel free to send me any feedback (or anything, really!) by <a href="mailto:theo.tchlx@proton.me">email</a>.</p>
   </section>
 
   <hr class="title-bar" />
+
+  <center><h2>More articles coming soon!</h2></center>
+  <center><h3>On open source philosophy, open access and scientific research,<br />management, tech, low-level computer science...</h3></center>
 
   <ul>
     {qualities.sort().map((insight) => (
