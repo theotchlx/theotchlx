@@ -4,8 +4,8 @@ layout: ../../layouts/ContributionLayout.astro
 title: 'Beep'
 description: 'Text, files, video and audio messaging platform.'
 startDate: 2024-01
-dates: "since its launch in early January 2024"
-contributors: "The DO class of 2023-2026 (15 people)"
+dates: "since its launch in early January 2024."
+contributors: "The DO class of 2023-2026 (15 people)."
 tags: ["open source", "large", "gitlab", "web", "devops", "cloud", "webrtc", "management"]
 size: 3
 ---
