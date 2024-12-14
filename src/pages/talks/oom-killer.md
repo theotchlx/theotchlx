@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectLayout.astro
+layout: ../../layouts/TalkLayout.astro
 
 title: 'Beep'
 abstract: 'An interactive talk about a practical use of the Linux OOM killer.'

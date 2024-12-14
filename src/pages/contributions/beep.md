@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ProjectLayout.astro
+layout: ../../layouts/ContributionLayout.astro
 
 title: 'Beep'
 description: 'Text, files, video and audio messaging platform.'
