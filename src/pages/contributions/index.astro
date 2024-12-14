@@ -13,16 +13,20 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
 <BaseLayout pageTitle={pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
   <section class="box">
-    <h2>Every contribution is free to read, copy, and share :)!</h2>
-    <p>This is where I publish my contributions for free. I try to make them as clear, concise and qualitative as possible.<br />Feel free to send me any feedback (or anything, really!) by <a href="mailto:theo.tchlx@proton.me">email</a>.</p>
-    depth of size. Rich moderate shallow (shallow is only covers surface level blahblahblah)
+    <h2>My contributions to the world of open source software.</h2>
+    <p>
+      This is a list of my most important contributions to open source communities.<br />
+      They are sorted by importance, but you can also sort them by tags.
+    </p>
     <p>Sort contributions by tags: <a href="/contributions/tags/">See all tags</a></p>
-    my contributions to the open source community/world.
   </section>
 
   <hr class="title-bar" />
 
-  <ul>
+  <center><h2>Coming soon!</h2></center>
+  <center>I am currently in the process of listing my contributions :)</center>
+
+  {/*<ul>
     {qualities.sort().map((size) => (
       // <>...</> is to return only one thing. Because a map returns only one element.
       <>
@@ -50,6 +54,6 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
       .map((contribution) => (
         <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
       ))}
-  </ul>
+  </ul>*/}
 </BaseLayout>
 

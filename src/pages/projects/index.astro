@@ -13,8 +13,11 @@ const sizes = projects.map((project) => project.frontmatter.size).filter((value,
 <BaseLayout pageTitle={pageTitle}>
   <h1>{ pageTitle.toUpperCase() }</h1>
   <section class="box">
-    <h2>Here's what I made, or am working on!</h2>
-    <p>Below are most of my current and past projects.</p>
+    <h2>Here's what I made, or am working on.</h2>
+    <p>
+      Below are most of my current and past projects.<br />
+      They are sorted by size, but you can also sort them by tags.
+    </p>
     <p>Sort projects by tags: <a href="/projects/tags/">See all tags</a></p>
   </section>
 

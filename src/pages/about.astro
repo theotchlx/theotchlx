@@ -70,7 +70,7 @@ const technos = [
   },
   {
     title: "Red-team security",
-    content: ["netcat", "curl", "nmap"]
+    content: ["netcat", "nmap", "curl"]
   },
   {
     title: "Blue-team security",
@@ -259,7 +259,7 @@ const enjoy = {
     <h3>This list does not include Cloud service providers' products</h3>
     <details>
       <summary class="top-summary">Click here to show/hide the list</summary>
-      <h3>Each list is sorted in descending order of practice with the products</h3>
+      <h3>Each list is sorted in descending order of practice with the given tools</h3>
       {technos.map((techno) => (
           <details open="true">
             <summary>{techno.title}</summary>
