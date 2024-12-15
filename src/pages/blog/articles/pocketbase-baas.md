@@ -2,9 +2,9 @@
 layout: ../../../layouts/MarkdownArticleLayout.astro
 
 title: 'PocketBase'
-pubDate: 2022-07-01
-abstract: 'quick overview of a ready-to-use backend for your frontend projects'
-author: 'Astro Learner'
+pubDate: 2024-10-12
+abstract: 'Quick overview of a ready-to-use backend for your frontend projects'
+author: 'Théo Tchilinguirian'
 tags: ["BaaS", "Tech", "Backend"]
 insight: 3
 ---
