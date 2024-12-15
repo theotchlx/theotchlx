@@ -6,8 +6,8 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={"theotchlx | " + frontmatter.title}>
   <h1>{frontmatter.title}</h1>
-  
-  <blockquote><em>{frontmatter.description}</em></blockquote>
+
+  <blockquote>{frontmatter.description}</blockquote>
 
   <p>
     <strong>Contributors:</strong> {frontmatter.contributors}<br />
@@ -41,6 +41,16 @@ const { frontmatter } = Astro.props;
     margin: 2rem 0;
   }
 
+  blockquote {
+    font-style: italic;
+    font-size: 1.115em;
+    font-weight: 600;
+    margin: 1em 0;
+    padding: 1em;
+    border-left: 5px solid #2D4A6F;
+    background-color: #E5E3E5;
+  }
+
   a {
     display: block;
     text-decoration: none;
@@ -69,6 +79,11 @@ const { frontmatter } = Astro.props;
   }
 
   @media (prefers-color-scheme: dark) {
+    blockquote {
+      background-color: #343434;
+      border-color: #2D4A6F;
+    }
+
     a {
       color: #A1A1A1;
     }
@@ -83,5 +98,6 @@ const { frontmatter } = Astro.props;
 
     .tag:hover {
       background-color: #493F38;
+    }
   }
 </style>
