@@ -1,18 +1,18 @@
 ---
 layout: ../../layouts/TalkLayout.astro
 
-title: 'Beep'
-abstract: 'An interactive talk about a practical use of the Linux OOM killer.'
+title: 'Rearrange your RAM'
+abstract: 'An interactive talk about a practical use of the Linux OOM Killer.'
 dateGiven: 2024-06
 dates: "Polycloud (2024)"
 talkers: "Théo Tchilinguirian"
-tags: ["Linux"]
+tags: ["Linux", "Kernel", "Demo"]
 size: 3
 ---
 
 ## What is this about?
 
-I gave this talk at Polytech Montpellier, during the Polycloud 2024.  
+I gave this ~20mn talk at Polytech Montpellier, during the Polycloud 2024.  
 It's more like a hands-on demonstration of the Linux OOM (Out-Of-Memory) Killer, that is, the mechanism that protects a Linux system against memory overflow.
 
 ## How does it work?
