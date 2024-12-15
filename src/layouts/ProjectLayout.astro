@@ -20,6 +20,10 @@ const { frontmatter } = Astro.props;
     ))}
   </div>
   <hr />
+
+  {frontmatter.wip && (
+    <center><h2>- This article is a work in progress. -</h2></center>
+  )}
   
   <slot />
 </BaseLayout>
