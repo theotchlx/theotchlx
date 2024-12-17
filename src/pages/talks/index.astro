@@ -2,6 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DocumentItem from '../../components/DocumentItem.astro';
 
+import { Image } from 'astro:assets';
+import localMeImage from '../../images/me.jpg';
+
 const pageTitle = "My talks";
 
 const talks = await Astro.glob('./*.md');
@@ -42,7 +45,7 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
   
     <!-- Right side: image -->
     <div class="right-block">
-      <img src="/src/pages/talks/images/polycloud-oomkiller.jpg" alt="Théo Tchilinguirian" />
+      <Image src={localMeImage} alt="Théo Tchilinguirian" />
     </div>
   </div>
   
