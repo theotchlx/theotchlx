@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 
-title: 'Beep'
-description: 'Text, files, video and audio messaging platform.'
+title: 'Rustique'
+description: 'Scientific article analyser'
 startDate: 2024-01
-dates: "since its launch in early January 2024."
-contributors: "The DO class of 2023-2026 (15 people)."
+dates: "in design phase since October 2024."
+contributors: "Théo Tchilinguirian, Julien Tchilinguirian (independant arachnologist and MSc. in ecology)"
 tags: ["open source", "large", "gitlab", "web", "devops", "cloud", "webrtc", "management"]
 size: 1
 wip: true
@@ -13,11 +13,15 @@ wip: true
 
 ## The project
 
-**Beep** is a social media platform / messaging web application that can handle dozens of concurrent video and audio streams, as well as instant messaging, files, and has tons of features!
+**Rustique** is a program that takes in scientific literature, papers, text... Independant of their format, and outputs suggestions to a database based on defined interfaces.
 
-We're a team of 15 DevOps apprentice engineers in training, working on the project all year round!
+For example, you may have a website such as [Aranea](https://araneae.nmbe.ch/) from the NMBE. Each article such as [this one](https://araneae.nmbe.ch/data/5094/Zodarion_algiricum) is a display of information stored in a database.  
+As you can see in these articles, data may be text, geographical data, photographs, drawings, references, authors, past and present scientific classification, etc.  
+Rustique would interface with such a database to suggest updates and additions, which can be reviewed and corrected by experts before being added to the database.
 
-The current version of Beep is hosted at [beep.ovh](https://beep.ovh).
+Rustique could work with any database, as its interfaces from the database would be defined separately.
+
+I am currently in the process of designing the different components of Rustique, and making proof-of-concepts (POCs) for this project.
 
 ## Why Beep?
 

@@ -11,7 +11,7 @@ insight: 3
 
 You can also read this article [on Medium](https://medium.com/@theo.tchlx/pocketbase-a-ready-to-use-backend-for-your-frontend-projects-da6338c89b02).
 
-So you need to make a frontend but don't have the time to develop a backend application? PocketBase might be the solution you're looking for! It's a free and open-source frontend-agnostic backend written in Go. You can set it up in minutes and focus entirely on your frontend.
+So you need to make a frontend but don't have the time to develop a backend application? PocketBase might be the solution you're looking for! It's a free and open source frontend-agnostic backend written in Go. You can set it up in minutes and focus entirely on your frontend.
 
 In this article, we'll cover:
 

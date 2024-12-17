@@ -6,13 +6,20 @@ description: 'Distributed CI system in 4 microservices.'
 startDate: 2024-06
 dates: "since its launch in early January 2024"
 contributors: "The DO class of 2023-2026 (15 people)"
-tags: ["open source", "large", "gitlab", "web", "devops", "cloud", "webrtc", "management"]
+tags: ["Open-source", "Rust", "GitHub", "CI", "Microservices"]
 size: 1
+
 ---
 
-**Beep** is a social media platform / messaging web application that can handle dozens of concurrent video/audio streams, as well as instant messaging, files, and has tons of features!
+## The project
 
-We're a team of 15 DevOps apprentice working on the project all year round.
+**Sealci** is a distributed CI system written in Rust.  
+It is made of four microservices withcommon interface definitions using protobuff and OpenApi specifications. The interfaces are implemented using Tonic and gRPC following the API-driven development principle.
+
+We were fifteen DevOps student engineers working on the projects, divided in groups to distribute the efforts of designing and implementing each service together with the rest of the team.  
+The APIs being defined properly, we were able to work in parallel
+
+I worked on the scheduler design and implementation alone, and helped review the other microservices' design and implementation with an open source philosophy in mind.
 
 This is a class project we have been building for almost a year now, and we will continue to build on it for the next two years, as part of our studies.
 

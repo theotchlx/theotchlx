@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/TalkLayout.astro
 
-title: 'Beep'
-abstract: 'A short and interactive talk about a practical use of the Linux OOM killer.'
+title: 'wip'
+abstract: 'wip.'
 dateGiven: 2024-01
 dates: "since its launch in early January 2024"
 contributors: "The DO class of 2023-2026 (15 people)"
