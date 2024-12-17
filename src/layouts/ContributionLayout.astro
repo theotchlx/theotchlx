@@ -10,8 +10,7 @@ const { frontmatter } = Astro.props;
   <blockquote>{frontmatter.description}</blockquote>
 
   <p>
-    <strong>Contributors:</strong> {frontmatter.contributors}<br />
-    I have been a contributor of this project {frontmatter.dates}
+    <strong>Contributor since:</strong> {frontmatter.dates}
   </p>
   <strong>Tags:</strong>
   <div class="tags">
