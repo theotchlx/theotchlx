@@ -4,12 +4,14 @@ layout: ../../layouts/ProjectLayout.astro
 title: 'SealCI'
 description: 'Distributed CI system in 4 microservices.'
 startDate: 2024-06
-dates: "since its launch in early January 2024"
+dates: "Late June 2024"
 contributors: "The DO class of 2023-2026 (15 people)"
 tags: ["Open-source", "Rust", "GitHub", "CI", "Microservices"]
 size: 1
 
 ---
+
+Note: this article was written in December 2024. The project has evolved since, with new features such as release packaging and signing, utilizing our new Release Agent service running in our own Virtual Machine Manager based largely on Lumper (another DO project) and Rust-VMM.
 
 ## The project
 

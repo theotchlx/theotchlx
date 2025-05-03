@@ -4,12 +4,14 @@ layout: ../../layouts/ProjectLayout.astro
 title: 'Beep'
 description: 'Text, files, video and audio messaging platform.'
 startDate: 2024-01
-dates: "since its launch in early January 2024."
+dates: "Early January 2024."
 contributors: "The DO class of 2023-2026 (15 people)."
 tags: ["open source", "large", "gitlab", "web", "devops", "cloud", "webrtc", "management"]
 size: 1
 wip: true
 ---
+
+Note: this article was written in December 2024. The project has evolved since - and I am in the process of writing a Technical Architecture Document to break down Beep into cloud-native microservices tailored for Kubernetes. This article will get updated as soon as I have the time to do soo.
 
 ## The project
 
