@@ -1,7 +1,5 @@
-### Hi there!
+### Hi there, this is my account on GitHub.
 
-#### I'm Théo. I work as a DevOps apprentice and study at Polytech Montpellier (DO apprenticeship program).
+GitHub users, please be aware of the following: https://sfconservancy.org/GiveUpGitHub/
 
-How to reach me:
-
-* By email: theo.tchlx@gmail.com
+You can reach me by email for any enquiry, or simply to chat: mailto:theo.tchlx@gmail.com, though don't expect an instantaneous answer from this address.
