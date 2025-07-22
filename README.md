@@ -1,4 +1,4 @@
-### Hi there, this is my account on GitHub.
+### Hi there, this is my account on GitHub
 
 GitHub users, please be aware of the following: https://sfconservancy.org/GiveUpGitHub/
 
