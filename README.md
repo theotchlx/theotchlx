@@ -6,7 +6,7 @@ You can reach me by email for any enquiries, or simply to chat: mailto:theo.tchl
 
 I have given up GitHub for hosting my personal projects. ([See Software Freedom Conservancy's *Give Up  GitHub* site for details](https://GiveUpGitHub.org).)
 
-Any use of my projects' code by GitHub Copilot, past or present, is done without my permission.  We do not consent to GitHub's use of this project's code in Copilot.
+Any use of my projects' code by GitHub Copilot, past or present, is done without my permission.  I do not consent to GitHub's use of my projects' code in Copilot.
 
 You can [give up GitHub](https://GiveUpGitHub.org) too.
 
