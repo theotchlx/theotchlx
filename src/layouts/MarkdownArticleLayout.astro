@@ -13,12 +13,14 @@ const { frontmatter } = Astro.props;
     <strong>Published on:</strong> {frontmatter.pubDate.toString().slice(0,10)}<br />
     <strong>Written by:</strong> {frontmatter.author}
   </p>
+  {/*
   <strong>Tags:</strong>
   <div class="tags">
     {frontmatter.tags.map((tag: string) => (
       <p class="tag"><a href={`/blog/tags/${tag}`}>{tag}</a></p>
     ))}
   </div>
+  */}
   <hr />
   
   <slot />
