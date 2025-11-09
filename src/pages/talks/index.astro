@@ -49,7 +49,6 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
 
   <ul>
     {sizes.map((size) => (
-      // <>...</> is to return only one thing. Because a map returns only one element.
       <>
       <h3>
         {size === 1
