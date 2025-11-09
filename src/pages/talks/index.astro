@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import DocumentItem from '../../components/DocumentItem.astro';
 
 import { Image } from 'astro:assets';
-import localMeImage from '../../images/me-giving-talk.jpg';
+import featuredMeImage from '../../images/me-giving-talk.jpg';
 
 const pageTitle = "My talks";
 
@@ -45,7 +45,7 @@ const sizes = talks.map((talk) => talk.frontmatter.size).filter((value, index, s
   
     <!-- Right side: image -->
     <div class="right-block">
-      <Image src={localMeImage} alt="Théo Tchilinguirian" />
+      <Image src={featuredMeImage} alt="Théo Tchilinguirian" />
     </div>
   </div>
   
