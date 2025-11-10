@@ -1,8 +1,8 @@
 ---
-const { url, title, description, date } = Astro.props;
+const { url, title, description, date, display_last } = Astro.props;
 ---
 
-<li><h4>{ date ? date.toString().slice(0,10) : '' }</h4> <a href={ url }>{ title }</a>{ description ? ': ' + description : '' }</li>
+<li><h4>{ date ? date.toString().slice(0,10) : '' }</h4> <a href={ url }>{ title }</a>{ description ? ': ' + description : '' } <small>{ display_last }</small></li>
 
 <style>
   a {

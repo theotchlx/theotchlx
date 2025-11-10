@@ -30,16 +30,20 @@ const qualities = articles.map((article) => article.frontmatter.insight).filter(
     <h3>All articles by date (newest first)</h3>
     {articles
       .map((article) => (
-        <DocumentItem date={article.frontmatter.pubDate} url={article.url} title={article.frontmatter.title} description={article.frontmatter.abstract} />
-      <p>
-        {article.frontmatter.insight === 1
-          ? "Rich insight depth"
-          : article.frontmatter.insight === 2
-          ? "Moderate insight depth"
-          : article.frontmatter.insight === 3
-          ? "Shallow insight depth"
-          : "Uncategorized article"}
-      </p>
+      <DocumentItem
+        date={article.frontmatter.pubDate}
+        url={article.url}
+        title={article.frontmatter.title}
+        description={article.frontmatter.abstract}
+        display_last=
+          {article.frontmatter.insight === 1
+            ? "Subject insight depth: rich"
+            : article.frontmatter.insight === 2
+            ? "Subject insight depth: moderate"
+            : article.frontmatter.insight === 3
+            ? "Subject insight depth: shallow"
+            : "Uncategorized article"}
+      />
       ))}
   </ul>
 </BaseLayout>
