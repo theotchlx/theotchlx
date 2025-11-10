@@ -26,36 +26,20 @@ const qualities = articles.map((article) => article.frontmatter.insight).filter(
 
   <hr class="title-bar" />
 
-  <center><h2>More articles coming soon!</h2></center>
-  <center><h3>On open source philosophy, open access and scientific research,<br />management, tech, low-level computer science...</h3></center>
-
-  <ul>
-    {qualities.sort().map((insight) => (
-      // <>...</> is to return only one thing. Because a map returns only one element.
-      <>
-      <h3>
-        {insight === 1
-          ? "Rich insight depth"
-          : insight === 2
-          ? "Moderate insight depth"
-          : insight === 3
-          ? "Shallow insight depth"
-          : "Other articles"}
-      </h3>
-      {articles
-        .filter((project) => project.frontmatter.insight === insight)
-        .map((article) => (
-          <DocumentItem date={article.frontmatter.pubDate} url={article.url} title={article.frontmatter.title} description={article.frontmatter.abstract} />
-        ))}
-      </>
-    ))}
-  </ul>
-  <hr />
   <ul>
     <h3>All articles by date (newest first)</h3>
     {articles
       .map((article) => (
         <DocumentItem date={article.frontmatter.pubDate} url={article.url} title={article.frontmatter.title} description={article.frontmatter.abstract} />
+      <p>
+        {article.frontmatter.insight === 1
+          ? "Rich insight depth"
+          : article.frontmatter.insight === 2
+          ? "Moderate insight depth"
+          : article.frontmatter.insight === 3
+          ? "Shallow insight depth"
+          : "Uncategorized article"}
+      </p>
       ))}
   </ul>
 </BaseLayout>
