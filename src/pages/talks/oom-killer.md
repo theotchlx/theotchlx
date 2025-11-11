@@ -8,11 +8,12 @@ dates: "Polycloud (2024)"
 talkers: "Théo Tchilinguirian"
 tags: ["Linux", "Kernel", "Demo"]
 size: 3
+length: 10
 ---
 
 ## What is this about?
 
-I gave this ~20mn talk at Polytech Montpellier, during the Polycloud 2024.  
+I gave this ~10mn talk at Polytech Montpellier, during the open mic at the Polycloud 2024 conference.  
 It's more like a hands-on demonstration of the Linux OOM (Out-Of-Memory) Killer, that is, the mechanism that protects a Linux system against memory overflow.
 
 ## How does it work?
