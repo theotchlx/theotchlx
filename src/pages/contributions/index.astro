@@ -44,12 +44,4 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
       </>
     ))}
   </ul>
-  <hr />
-  <ul>
-    <h3>All contributions by date (latest first)</h3>
-    {contributions
-      .map((contribution) => (
-        <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
-      ))}
-  </ul>
 </BaseLayout>
