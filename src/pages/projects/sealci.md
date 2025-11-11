@@ -8,6 +8,7 @@ dates: "Late June 2024"
 contributors: "The DO class of 2023-2026 (15 people)"
 tags: ["Open-source", "Rust", "GitHub", "CI", "Microservices"]
 size: 1
+people: 15
 
 ---
 

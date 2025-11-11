@@ -44,6 +44,7 @@ const sizes = projects.map((project) => project.frontmatter.size).filter((value,
             title={project.frontmatter.title}
             description={project.frontmatter.description}
             date={project.frontmatter.startDate}
+	    display_last={project.frontmatter.people + " contributors"}
           />
         ))}
       </>
