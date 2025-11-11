@@ -3,81 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "My background";
 
-const technos = [
-  {
-    title: "Programming languages",
-    content: ["Rust", "Go", "Python", "TypeScript", "C"]
-  },
-  {
-    title: "Frontend web frameworks",
-    content: ["React+NextJS+Vite", "Angular", "Astro", "VueJS"]
-  },
-  {
-    title: "Frontend libraries",
-    content: ["Tailwind", "shadcn", "Bootstrap"]
-  },
-  {
-    title: "Backend web frameworks",
-    content: ["AdonisJS", "NestJS", "ExpressJS"]
-  },
-  {
-    title: "Containerization and orchestration",
-    content: ["Docker", "Compose", "Kubernetes", "Podman", "Packer"]
-  },
-  {
-    title: "Virtualization platforms",
-    content: ["QEMU+KVM", "Proxmox"]
-  },
-  {
-    title: "Automation workflows and GitOps",
-    content: ["GitLab CI", "GitHub Actions", "ArgoCD"]
-  },
-  {
-    title: "Monitoring and log management tools",
-    content: ["Prometheus", "Grafana", "Uptime Kuma"]
-  },
-  {
-    title: "Remote infrastructure and configuration management",
-    content: ["Terraform", "Ansible"]
-  },
-  {
-    title: "Cloud service providers",
-    content: ["GCP", "AWS", "OVH"]
-  },
-  {
-    title: "SQL database systems",
-    content: ["PostgreSQL", "MySQL", "SQLite"]
-  },
-  {
-    title: "Document database systems",
-    content: ["MongoDB"]
-  },
-  {
-    title: "key-value database systems",
-    content: ["Redis"]
-  },
-  {
-    title: "Object storage systems",
-    content: ["MinIO"]
-  },
-  {
-    title: "Operating system administration",
-    content: ["Linux", "FreeBSD"]
-  },
-  {
-    title: "Networking",
-    content: ["Traefik", "Nginx", "Apache"]
-  },
-  {
-    title: "Red-team security",
-    content: ["netcat", "nmap", "curl"]
-  },
-  {
-    title: "Blue-team security",
-    content: ["ufw"]
-  }
-];
-
 ---
 
 <BaseLayout pageTitle={"theotchlx | " + pageTitle}>
@@ -256,26 +181,6 @@ const technos = [
         STEM, Human sciences, English, Computer science.
       </ul>
     </div>
-  </section>
-
-  <section id="skills" class="skills-section">
-    <hr class="title-bar" />
-    <h2>Here are a few technologies I'm familiar with</h2>
-    <h3>This list does not include Cloud service providers' products</h3>
-    <details>
-      <summary class="top-summary">Click here to show/hide the list</summary>
-      <h3>Each list is sorted in descending order of practice with the given tools</h3>
-      {technos.map((techno) => (
-          <details open="true">
-            <summary>{techno.title}</summary>
-            <ul class="skill-list">
-              {techno.content.map((element) =>
-                <li class="skill"><code>{element}</code></li>
-              )}
-            </ul>
-          </details>
-        ))}
-    </details>
   </section>
 </BaseLayout>
 
