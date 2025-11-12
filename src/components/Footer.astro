@@ -1,13 +1,17 @@
 ---
 import Social from './Social.astro';
 
-const platforms = [
-  ["https://", "www.github.com/", "GitHub", "theotchlx"],
+const socials = [
   ["https://", "www.linkedin.com/in/", "LinkedIn", "theotchlx"],
+//  ["https://", "floss.social/", "Mastodon", "@theotchlx"],
+  ["mailto:", "", "Email", "theo.tchlx@proton.me"]
+];
+
+const forges = [
+  ["https://", "www.github.com/", "GitHub", "theotchlx"],
   ["https://", "floss.social/", "Mastodon", "@theotchlx"],
   ["https://", "codeberg.org/", "Codeberg", "theotchlx"],
   ["https://", "sr.ht/", "SourceHut", "~theotchlx"],
-  ["mailto:", "", "Email", "theo.tchlx@proton.me"]
 ];
 ---
 
@@ -15,7 +19,7 @@ const platforms = [
   <hr />
   <p>How to reach me:</p>
   <ul>
-  {platforms.map(([protocol, url, name, username]) => 
+  {socials.map(([protocol, url, name, username]) => 
     <li>
       <Social protocol={protocol} url={url} name={name} username={username} />
     </li>
