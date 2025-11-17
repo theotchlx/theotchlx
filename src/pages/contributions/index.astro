@@ -15,8 +15,7 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
   <section class="box">
     <h2>My contributions to the world of open source software.</h2>
     <p>
-      This unusual record of my contributions to open source communities exists as part of an assignment required by my degree.<br />
-      They are sorted by importance, but you can also sort them by tags.
+      This unusual record of my contributions to open source communities exists as part of an assignment required by my degree.
     </p>
     <p>Sort contributions by tags: <a href="/contributions/tags/">See all tags</a></p>
   </section>
@@ -24,24 +23,10 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
   <hr class="title-bar" />
 
   <ul>
-    {qualities.sort().map((size) => (
-      // <>...</> is to return only one thing. Because a map returns only one element.
-      <>
-      <h3>
-        {size === 1
-          ? "Minor contributions"
-          : size === 2
-          ? "Moderate contributions"
-          : size === 3
-          ? "Major contributions"
-          : "Other contributions"}
-      </h3>
-      {contributions
-        .filter((project) => project.frontmatter.size === size)
-        .map((contribution) => (
-          <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
-        ))}
-      </>
-    ))}
+    <h3>All contributions by date (newest first)</h3>
+    {contributions
+      .map((contribution) => (
+        <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
+      ))}
   </ul>
 </BaseLayout>
