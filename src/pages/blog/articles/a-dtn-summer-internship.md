@@ -128,7 +128,7 @@ I was very glad to meet so many kind DTN lovers in person for the first time, al
 ### A conclusion
 
 This internship was an amazing experience.  
-Both on the social and cultural level - I had amazing interactions with fascinating Humans in a quite far and somewhat different place, and got to learn some German, which I love! And on the technical level - I learnt so much, C, Rust, Nix.., and of course Delay/Disruption-Tolerant Networking!
+Both on the social and cultural level - I had amazing interactions with fascinating Humans in a quite far and somewhat different place, explored an amazing city, country, and central Europe; and got to learn some German, which I love! And on the technical level - I learnt so much, C, Rust, Nix.., and of course Delay/Disruption-Tolerant Networking!
 
 I thank all my friends at D3TN for hosting me this summer and for all the incredible opportunities they've given me, and I'm looking forward to continuing to work with them and the whole DTN community.  
 See you in our delay-tolerant email inboxes :-).
