@@ -24,16 +24,16 @@ Ratatui development hosts its source code on GitHub, features a very complete CI
 
 Before then, Ratatui's public API only exposed "full" or "contiguous" border types such as the following:
 
-┌─────────────┐
-│Plain borders│
+┌─────────────┐  
+│Plain borders│  
 └─────────────┘
 
-╭───────────────╮
-│Rounded borders│
+╭───────────────╮  
+│Rounded borders│  
 ╰───────────────╯
 
-╔══════════════╗
-║double borders║
+╔══════════════╗  
+║double borders║  
 ╚══════════════╝
 
 And many others, including notably block borders and borders using specific drawing techniques.
