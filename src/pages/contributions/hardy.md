@@ -14,7 +14,7 @@ size: 1
 Hardy is a Bundle Protocol implementation strongly optimized for running on the Cloud, and designed with assumptions of high-throughput connectivity on hyperscaler infrastructures.
 It implements the Bundle Protocol version 7 and the TCPCLv4.
 
-Rick Taylor is a DTN expert and the sole developer and maintainer of Hardy.
+Rick Taylor is a DTN expert and currently the sole developer and maintainer of Hardy.
 
 Hardy follows a very modular design that makes understanding the codebase, and contributing easier.
 
