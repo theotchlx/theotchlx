@@ -2,7 +2,7 @@
 layout: ../../layouts/ContributionLayout.astro
 
 title: 'Hardy'
-abstract: 'A BPv7 DTN server implementation tailored for the Cloud'
+description: 'A BPv7 DTN server implementation tailored for the Cloud'
 startDate: 2025-11
 dates: "November 2025."
 tags: ["GitHub", "Rust", "BP"]

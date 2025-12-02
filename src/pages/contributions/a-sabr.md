@@ -2,7 +2,7 @@
 layout: ../../layouts/ContributionLayout.astro
 
 title: 'A-SABR'
-abstract: 'The Adaptive Library for Schedule-Aware Bundle Routing'
+description: 'The Adaptive Library for Schedule-Aware Bundle Routing'
 startDate: 2025-11
 dates: "November 2025."
 tags: ["GitHub", "Rust", "BP"]

@@ -2,7 +2,7 @@
 layout: ../../layouts/ContributionLayout.astro
 
 title: 'Ratatui'
-abstract: 'A Rust crate for cooking up Terminal User Interfaces'
+description: 'A Rust crate for cooking up Terminal User Interfaces'
 startDate: 2024-01
 dates: "December 2024."
 tags: ["GitHub", "Rust", "TUI"]
