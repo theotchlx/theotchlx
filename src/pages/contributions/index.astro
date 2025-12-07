@@ -15,7 +15,7 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
   <section class="box">
     <h2>My contributions to the world of open source software.</h2>
     <p>
-    This unusual record of my contributions to open source communities exists as part of an assignment required by my degree.<br />
+    This unusual record of my contributions to open source communities exists as part of an assignment required by my degree. As of November 2025, I am still writing articles on each of my contributions.<br />
     However you might find it otherwise interesting.
     </p>
     <p>Sort contributions by tags: <a href="/contributions/tags/">See all tags</a></p>
@@ -27,7 +27,7 @@ const qualities = contributions.map((contribution) => contribution.frontmatter.s
     <h3>All contributions by date (newest first)</h3>
     {contributions
       .map((contribution) => (
-        <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.abstract} />
+        <DocumentItem date={contribution.frontmatter.pubDate} url={contribution.url} title={contribution.frontmatter.title} description={contribution.frontmatter.description} />
       ))}
   </ul>
 </BaseLayout>
