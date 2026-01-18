@@ -6,8 +6,6 @@ const pageTitle = "My blog";
 
 const articles = await Astro.glob('./articles/*.md');
 articles.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
-
-const qualities = articles.map((article) => article.frontmatter.insight).filter((value, index, self) => self.indexOf(value) === index);
 ---
 
 <BaseLayout pageTitle={"theotchlx | " + pageTitle}>
@@ -35,14 +33,6 @@ const qualities = articles.map((article) => article.frontmatter.insight).filter(
         url={article.url}
         title={article.frontmatter.title}
         description={article.frontmatter.abstract}
-        display_last=
-          {article.frontmatter.insight === 1
-            ? "Subject insight depth: rich"
-            : article.frontmatter.insight === 2
-            ? "Subject insight depth: moderate"
-            : article.frontmatter.insight === 3
-            ? "Subject insight depth: shallow"
-            : "Uncategorized article"}
       />
       ))}
   </ul>

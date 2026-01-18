@@ -6,7 +6,6 @@ pubDate: 2025-11-11
 abstract: 'Research and development of a BGP solution for propagating EID reachability information in DTNs.'
 author: 'Théo Tchilinguirian'
 tags: ["DTN", "BGP", "Computer networks", "Research"]
-insight: 2
 ---
 
 ### Some context to this internship
