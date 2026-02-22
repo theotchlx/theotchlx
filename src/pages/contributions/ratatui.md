@@ -55,11 +55,7 @@ Apart from the lack of dashed and dotted borders, a second issue that was identi
 I added dotted borders into Ratatui [with the following PR](https://github.com/ratatui/ratatui/pull/1573), complete with maximum test coverage, and improvements to the naming conventions.  
 Ratatui's community is great, and it has been a very good experience working with them so far. I very much recommend the experience with the maintainers.
 
-Contributed to Ratatui - a Rust library to build TUIs (Terminal User Interfaces).
-
-This was a great experience working with the maintainers - and I believe this PR encompasses my commitment and ability to follow rigorous guidelines and improve test coverage, refactor a codebase into cleaner code, all the while adding new features.
-
-It took around a month from December 2024 to January 2025, and the feature got released around 10 months later in the November 1st [v0.30.0-beta.0 release](https://github.com/ratatui/ratatui/releases/tag/ratatui-v0.30.0-beta.0). Here's the [whole beta release](https://github.com/ratatui/ratatui/pull/2162).
+It took around a month from December 2024 to January 2025 to implement the feature, feedback, and merge the PR ; the feature got released around 10 months later in the November 1st [v0.30.0-beta.0 release](https://github.com/ratatui/ratatui/releases/tag/ratatui-v0.30.0-beta.0). Here's the [whole beta release](https://github.com/ratatui/ratatui/pull/2162).
 
 The following [Ratatui article](https://ratatui-0-30.ratatui.pages.dev/highlights/v030/) highlights the new features, including the numerous [new border types](https://ratatui-0-30.ratatui.pages.dev/highlights/v030/#new-bordertypes).
 
