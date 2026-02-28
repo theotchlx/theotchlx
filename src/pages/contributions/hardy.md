@@ -61,11 +61,13 @@ This did require going around current limitations of this type, but I believe we
 I'm glad I was able to relieve Rick of this task, and work with him on his project :-).
 I like that he has good standards for his codebase.
 
-Looking forward to the next time we go to the pub...
+Looking forward to the next time him and I go to the pub...
 
 ---
 
-One tangential effect worth noting is that I directly and indirectly attracted attention to the project.
-Rick consequently wrote a whole bunch of new issues to make the most of this, and I made sure to advertise them.
+I am happy to have attracted other peers to work on the project.
+Rick wrote a whole bunch of new issues in December, and I made sure to advertise them.
 
-Notably, Charley, an alumnus of my training, made interesting contributions to the project.
+Notably, Charley, an alumnus of my training, made a few contributions to the project.
+
+Moreover, working on Hardy taught me propoer error handling in Rust using (`thiserror`, `anyhow`).
