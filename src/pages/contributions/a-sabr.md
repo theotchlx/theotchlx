@@ -32,6 +32,12 @@ At the event, I helped supervise the Hackathon.
 
 In the following PRs [#7](https://github.com/DTN-MTP/A-SABR/pull/7) and [#8](https://github.com/DTN-MTP/A-SABR/pull/8), I fixed typos in the documentation and exercises.
 
+I helped review PR [#30](https://github.com/DTN-MTP/A-SABR/pull/30) thoroughly - it implements a CI and commit hooks.
+
+I implemented a lot of error handling in [PR #40](https://github.com/DTN-MTP/A-SABR/pull/40).
+
+I am helping on some refactor in [PR #41](https://github.com/DTN-MTP/A-SABR/pull/41). It got a bit large.
+
 ---
 
 Integrating A-SABR into other toolchains requires it to be ready as a production payload.
@@ -51,7 +57,7 @@ A-SABR integration into Hardy, as well as A-SABR benchmarking and testing, are c
 
 ---
 
-I am working towards a design and implementation of routing across *regions* in A-SABR (PRs [#34](https://github.com/DTN-MTP/A-SABR/pull/34) and [#36](https://github.com/DTN-MTP/A-SABR/pull/36)), a contribution much aligned with my upcoming thesis work.
+My main work is towards a design and implementation of routing across *regions* in A-SABR (PRs [#34](https://github.com/DTN-MTP/A-SABR/pull/34), [#36](https://github.com/DTN-MTP/A-SABR/pull/36) and [#49](https://github.com/DTN-MTP/A-SABR/pull/49), a contribution much aligned with my upcoming thesis work.
 
 Currently, we are at the design phase, where I explore the problem without assumptions, in order to discover and wholly define the fundamental concepts that make up the problem.
 
